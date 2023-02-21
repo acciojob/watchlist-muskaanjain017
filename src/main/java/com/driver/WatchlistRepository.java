@@ -114,6 +114,7 @@ public class WatchlistRepository {
             for(int i=0; i<dirMovObjList.size(); i++){
                 mov.remove(dirMovObjList.get(i));
             }
+
             dm.remove(d);
             return "Delete Director details successfully";
         }
