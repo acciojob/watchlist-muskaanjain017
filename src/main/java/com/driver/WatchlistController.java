@@ -28,17 +28,17 @@ public class WatchlistController {
         return new ResponseEntity<>(message, HttpStatus.CREATED);
     }
     @GetMapping("/movies/get-movie-by-name/{name}")
-    public ResponseEntity getMovieByName(@PathParam("name")String movieName){
+    public ResponseEntity getMovieByName(@PathVariable String movieName){
         Movie m1 = watchlistService.getMovieByName(movieName);
         return new ResponseEntity<>(m1, HttpStatus.FOUND);
     }
     @GetMapping("/movies/get-director-by-name/{name}")
-    public ResponseEntity getDirectorByName(@PathParam("name")String directorName){
+    public ResponseEntity getDirectorByName(@PathVariable String directorName){
         Director d1 = watchlistService.getDirectorByName(directorName);
         return new ResponseEntity<>(d1, HttpStatus.FOUND);
     }
     @GetMapping("/movies/get-movies-by-director-name/{director}")
-    public ResponseEntity getMoviesByDirectorName(@PathParam("director")String directorName){
+    public ResponseEntity getMoviesByDirectorName(@PathVariable String directorName){
         List<String> listOfMovies= watchlistService.getMoviesByDirectorName(directorName);
         return new ResponseEntity<>(listOfMovies, HttpStatus.FOUND);
     }
