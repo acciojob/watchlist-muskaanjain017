@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public class WatchlistRepository {
+public class MovieRepository {
     List <Movie> mov = new ArrayList<>();
     List <Director> dir = new ArrayList<>();
     Map<Director, List<Movie>> dm = new HashMap<>();

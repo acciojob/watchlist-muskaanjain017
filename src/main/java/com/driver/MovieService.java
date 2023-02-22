@@ -6,41 +6,41 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class WatchlistService {
+public class MovieService {
     @Autowired
-    WatchlistRepository watchlistRepository;
+    MovieRepository movieRepository;
     public String addMovie(Movie movie) {
-        return watchlistRepository.addMovie(movie);
+        return movieRepository.addMovie(movie);
     }
     public String addDirector(Director director){
-        return watchlistRepository.addDirector(director);
+        return movieRepository.addDirector(director);
     }
 
     public String addMovieDirectorPair(String movieName, String directorName) {
-        return watchlistRepository.addMovieDirectorPair(movieName, directorName);
+        return movieRepository.addMovieDirectorPair(movieName, directorName);
     }
 
     public Movie getMovieByName(String movieName) {
-        return watchlistRepository.getMovieByName(movieName);
+        return movieRepository.getMovieByName(movieName);
     }
 
     public Director getDirectorByName(String directorName) {
-        return watchlistRepository.getDirectorByName(directorName);
+        return movieRepository.getDirectorByName(directorName);
     }
 
     public List<String> getMoviesByDirectorName(String directorName) {
-        return watchlistRepository.getMoviesByDirectorName(directorName);
+        return movieRepository.getMoviesByDirectorName(directorName);
     }
 
     public List<String> findAllMovies() {
-        return watchlistRepository.findAllMovies();
+        return movieRepository.findAllMovies();
     }
 
     public String deleteDirectorByName(String directorName) {
-        return watchlistRepository.deleteDirectorByName(directorName);
+        return movieRepository.deleteDirectorByName(directorName);
     }
 
     public String deleteAllDirectors() {
-        return watchlistRepository.deleteAllDirectors();
+        return movieRepository.deleteAllDirectors();
     }
 }
